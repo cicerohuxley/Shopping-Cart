@@ -67,3 +67,75 @@
 
 ## Step 10
 ### You need to display the available products in your HTML. Start by using the addition assignment operator to add an empty template literal string to the innerHTML property of the dessertCards variable.
+
+## Step 11
+### In your template literal, create a div element with a class of dessert-card. In that div, create an h2 element and give it the text of the name variable.
+
+## Step 12 
+### After your h2 element, create two p elements. Give the first a class of dessert-price, and set the text to a dollar sign "$" followed by the value of the price variable. Give the second a class of product-category, and the text "Category: " followed by the value of the category variable.
+
+## Step 13
+### Finally, after your p elements, create a button element. Give it an id set to the value of the id variable, a class of btn add-to-cart-btn, and use "Add to cart" for the text.
+
+
+## Step 14
+### You are already familiar with an HTML class, but JavaScript also has a class. In JavaScript, a class is like a blueprint for creating objects. It allows you to define a set of properties and methods, and instantiate (or create) new objects with those properties and methods.
+
+### The class keyword is used to declare a class. Here is an example of declaring a Computer class:
+
+### Example Code
+#### class Computer {};
+#### Declare a ShoppingCart class.
+
+
+## Step 15
+### Classes have a special constructor method, which is called when a new instance of the class is created. The constructor method is a great place to initialize properties of the class. Here is an example of a class with a constructor method:
+
+### Example Code
+#### class Computer {
+####  constructor() {
+####  }
+#### }
+### Add an empty constructor method to the ShoppingCart class.
+
+
+## Step 16
+### The this keyword in JavaScript is used to refer to the current object. Depending on where this is used, what it references changes. In the case of a class, it refers to the instance of the object being constructed. You can use the this keyword to set the properties of the object being instantiated. Here is an example:
+
+### Example Code
+#### class Computer {
+####     constructor() {
+####      this.ram = 16;
+####    }
+####   }
+#### In your constructor, use the this keyword to set the items property to an empty array. Also, set the total property to 0, and the taxRate property to 8.25.
+
+
+## Step 17
+### Your ShoppingCart class needs the ability to add items. Create an empty addItem method, which takes two parameters: id and products. Creating a method might look like this:
+
+### Example Code
+#### class Computer {
+####   constructor() {
+####     this.ram = 16;
+####   }
+
+####   addRam(amount) {
+####     this.ram += amount;
+####   }
+#### }
+### The first parameter, id, is the id of the product the user has added to their cart. The second parameter, products, is an array of product objects. By using a parameter instead of directly referencing your existing products array, this method will be more flexible if you wanted to add additional product lists in the future.
+
+## Step 18
+### You need to find the product that the user is adding to the cart. Remember that arrays have a .find() method. In your addItem function, declare a product variable, and assign it the value of calling the .find() method on the products array.
+
+### For the callback to .find(), pass a function that takes a single parameter item, and returns whether the id property of item is strictly equal to the id parameter passed to addItem.
+
+
+## Step 19
+### Use const and destructuring to extract name and price variables from product.
+
+
+## Step 20
+### Now you need to push the product into the cart's items array. Remember to use the this keyword.
+
