@@ -139,3 +139,70 @@
 ## Step 20
 ### Now you need to push the product into the cart's items array. Remember to use the this keyword.
 
+## Step 21
+### You now need a total count of each product that the user has in the cart. Declare a totalCountPerProduct variable, and assign it an empty object.
+
+## Step 22
+### Use the .forEach() method to loop through the items array. Pass an empty callback function that takes a single parameter dessert.
+
+
+## Step 23
+### You’re on the right track! However, let’s take a moment to address a common issue when working with objects in JavaScript.
+
+### When you try to access an object property that doesn’t exist, JavaScript returns undefined. If you then attempt to perform arithmetic operations on undefined, it can lead to unexpected results, such as NaN.
+
+### To prevent this, you can use the || (logical OR) operator to provide a default value.
+
+### Example Code
+|-------------------------------------------|
+####  let scores = {}; 
+####  let players = ["Alice", "Bob", "Charlie"];
+
+####  players.forEach(player => {
+####    scores[player] = scores[player] || 0;
+####  });
+|-------------------------------------------|
+
+### Now, let’s apply this concept to your totalCountPerProduct object in the forEach callback. Make sure that each dessert.id property is initialized properly.
+
+### Initialize totalCountPerProduct[dessert.id] with a default value of 0 using the || operator.
+
+## Step 24
+### In the forEach callback, wrap the right-hand assignment totalCountPerProduct[dessert.id] || 0 in parentheses () to ensure proper evaluation, then increment the value by one.
+
+## Step 25
+### Now you need to get prepared to update the display with the new product the user added. Declare a currentProductCount variable, and assign it the value of the totalCountPerProduct object's property matching the id of product.
+
+## Step 26
+### You haven't written the code to generate the HTML yet, but if a product has already been added to the user's cart then there will be a matching element which you'll need.
+
+### Use .getElementById() to get the matching element - you'll be setting the id value to product-count-for-id${product.id}, so use a template literal to query that value.
+
+### Assign your query to a currentProductCountSpan variable.
+
+## Step 27
+### The behaviour of the addItem method needs to change if the product is already in the cart or not. Create a ternary that checks if the current product is already in the cart. Use undefined for both the truthy and falsy expressions to avoid a syntax error.
+
+## Step 28
+### For your truthy expression, removing the undefined, you need to update the textContent of the currentProductCountSpan to be the currentProductCount followed by an x. Use a template literal to do so.
+
+## Step 29
+### For your falsy expression, you'll need to add new HTML to your productsContainer. Start by removing the undefined, then use the addition assignment operator and template literal syntax to add a div with the class set to product and the id set to dessert${id} to the innerHTML property of the productsContainer.
+
+## Step 30
+### Inside your div, add two p elements. Set the text of the second p element to be the value of the price variable.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
